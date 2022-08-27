@@ -22,9 +22,12 @@ const Home = () => {
 
   return (
     <section className="home">
-      <h1>Hi Trainer!</h1>
-      <p>To Start give me your trainer name</p>
-      <form onSubmit={handleSubmit}>
+      <img src="src/assets/image11.png" alt="pokemon" /> 
+      <div className="home__card">
+        <h1>Welcome Trainer!</h1>
+        <p>To Start give me your trainer name</p>
+      </div>
+      <form className="home__form" onSubmit={handleSubmit}>
         <input id='name' type="text" />
         <button>Catch them all</button>
       </form>

@@ -1,18 +1,36 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-root: {
+html {
+  font-size: 62.5%;
+}
+
+
+:root {
     /* colors  */
-    --var-primary: #DD1A1A;
-    --var-secondary: #0C0C0C;
-    --var-tertiary: #E5E5E5;
-    --var-quaternary: #212121;
+    --color-primary: #DD1A1A;
+    --color-secondary: #0C0C0C;
+    --color-tertiary: #E5E5E5;
+    --color-quaternary: #212121;
 
     /* font */
-    --font-primary: 'Pokemon Solid', sans-serif;
-                                                
-
+    --font-primary: 'Pokemon Solid', sans-serif;                                                
 }
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
 
 .home {
     height: 100vh;
@@ -20,6 +38,52 @@ root: {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--var-tertiary);
+    background-color: var(--color-tertiary);
+}
+
+.home__card {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home__card h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.home__form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__form input {
+    width: 60%;
+    padding: 1.2rem;
+    border-radius: .5rem 0 0 .5rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    color: var(--color-quaternary);
+    background-color: var(--color-tertiary);
+}
+
+.home__form button {
+    width: 40%;
+    padding: 1.2rem;
+    border-radius: 0 .5rem 0.5rem 0;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    color: var(--color-quaternary);
+    background-color: var(--color-tertiary);
+    cursor: pointer;
 }
 
