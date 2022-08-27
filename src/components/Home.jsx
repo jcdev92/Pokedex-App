@@ -31,6 +31,13 @@ const Home = () => {
         <input id='name' type="text" />
         <button>Catch them all</button>
       </form>
+      <foote className="home__box">
+        <div className="box__red"></div>
+        <div className="box__black"></div>
+        <div className="box__ball">
+          <div className="box__ball in"></div>
+        </div>
+      </foote>
     </section>
   )
 }

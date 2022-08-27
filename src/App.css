@@ -70,20 +70,31 @@ body {
     width: 60%;
     padding: 1.2rem;
     border-radius: .5rem 0 0 .5rem;
-    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.8);
     font-size: 1.6rem;
-    color: var(--color-quaternary);
-    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+    background-color: white;
 }
 
 .home__form button {
     width: 40%;
     padding: 1.2rem;
     border-radius: 0 .5rem 0.5rem 0;
-    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.8);
     font-size: 1.6rem;
-    color: var(--color-quaternary);
-    background-color: var(--color-tertiary);
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
     cursor: pointer;
+    font-weight: 700;
+    font-family: oswald, sans-serif;
+    transform: translateY(-.1rem);
+    transition: transform .2s ease-in-out;
+}
+
+.home__form button:hover {
+    color: black;
+    background-color: var(--color-primary);
+    transform: translateY(0.1rem);
+    box-shadow: none;
 }
 
