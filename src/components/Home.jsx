@@ -31,13 +31,13 @@ const Home = () => {
         <button>Catch them all</button>
       </form>
       </div>
-      <foote className="home__box">
+      <footer className="home__box">
         <div className="box__red"></div>
         <div className="box__black"></div>
         <div className="box__ball">
           <div className="box__ball in"></div>
         </div>
-      </foote>
+      </footer>
     </section>
   )
 }
