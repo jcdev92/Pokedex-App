@@ -1,0 +1,25 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+
+root: {
+    /* colors  */
+    --var-primary: #DD1A1A;
+    --var-secondary: #0C0C0C;
+    --var-tertiary: #E5E5E5;
+    --var-quaternary: #212121;
+
+    /* font */
+    --font-primary: 'Pokemon Solid', sans-serif;
+                                                
+
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--var-tertiary);
+}
+
