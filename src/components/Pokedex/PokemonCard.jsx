@@ -15,11 +15,11 @@ const PokemonCard = ({url}) => {
   console.log(pokemon)
 
   return (
-    <article>
-      <header>
+    <article className='card'>
+      <header className='card__header'>
         <img src={pokemon?.sprites.other["official-artwork"]["front_default"]} alt="" />
       </header>
-      <section className='body'>
+      <section className='card__body'>
         <h3>{pokemon?.name}</h3>
         <ul>
           {
@@ -29,7 +29,7 @@ const PokemonCard = ({url}) => {
           }
         </ul>
       </section>
-      <footer>
+      <footer card__footer>
         <ul>
           {
             pokemon?.stats.map(stat => (

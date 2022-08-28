@@ -14,9 +14,16 @@ const Pokedex = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Pokedex Academlo</h1>
-      <div className='cards-container'>
+    <section className="pokedex">
+      <header className="pokedex__box pokedex__box--header">
+        <img src="src/assets/image11.png" alt="pokemon" className="pokedex__img"/> 
+        <div className="box__red box__red--header"></div>
+        <div className="box__black box__black--header"></div>
+        <div className="box__ball box__ball--header">
+          <div className="box__ball in in--header"></div>
+        </div>
+      </header>
+      <div className='pokedex__cards'>
         {
           pokemons?.results.map(pokemon => (
             <PokemonCard 
@@ -26,7 +33,7 @@ const Pokedex = () => {
           ))
         }
       </div>
-    </div>
+    </section>
   )
 }
 
