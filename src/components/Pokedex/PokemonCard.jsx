@@ -24,12 +24,12 @@ const PokemonCard = ({url}) => {
         <ul>
           {
             pokemon?.types.map(slot => (
-              <li key={slot.type.url}>{slot.type.name}</li>
+              <li key={slot.type.url}>&nbsp;{slot.type.name}</li>
             ))
           }
         </ul>
       </section>
-      <footer card__footer>
+      <footer className="card__footer">
         <ul>
           {
             pokemon?.stats.map(stat => (

@@ -151,7 +151,7 @@ body {
 .pokedex {
     display: grid;
     grid-template-rows: repeat(2, auto);
-    grid-gap: 2rem;
+    gap: 5rem;
     justify-items: center;
     align-items: center;
     height: 100%;
@@ -191,23 +191,26 @@ body {
 
 .pokedex__cards {
     grid-row: 2/2;
-    width: 80%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 .card {
-    width: 20%;
-    heigth: 25%;
+    width: 22%;
+    heigth: 30%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     border: 1px solid var(--color-secondary);
+    gap: 1rem;
 }
+
 .card__header {
     display: flex;
     flex-flow: row wrap;
@@ -217,6 +220,11 @@ body {
     height: 100px;
 }
 
+.card__header img {
+    width: 35%;
+    height: auto;
+}
+
 .card__body {
     display: flex;
     flex-flow: column wrap;
@@ -224,6 +232,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    
 }
 
 .card__body ul {
@@ -233,10 +242,29 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-
 }
 
-.card__header img {
-    width: 35%;
-    height: auto;
+.card__footer {
+    width: 100%;
+    heigth: auto;
+    padding: 1.2rem;
 }
+
+.card__footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card__footer li {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+}
+
