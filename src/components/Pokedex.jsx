@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import PokemonCard from "./Pokedex/PokemonCard";
 import Pagination from "./Pokedex/Pagination";
 import SearchInput from "./Pokedex/SearchInput";
+import SelectType from "./Pokedex/SelectType";
 
 const Pokedex = () => {
   const nameTrainer = useSelector((state) => state.nameTrainer);
@@ -59,7 +60,7 @@ const Pokedex = () => {
           <div className="searchbar__input">
             <SearchInput setPokeSearch={setPokeSearch} />
           </div>
-          <select className="searchbar__select"></select>
+          <SelectType />
         </div>
       </div>
       <div className="pokedex__cards">
