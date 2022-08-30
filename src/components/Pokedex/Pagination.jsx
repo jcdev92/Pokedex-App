@@ -57,23 +57,23 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setPokemons, setPo
     if (totalPokemons) {
         return (
             <ul>
-              <button className={currentSegment > 0 ? "firstpage": "btn__off"} onClick={firstpage}>First Page</button>
-              <button className={currentSegment > 0 ? "showless": "btn__off"} onClick={handleClickMinus}>...</button>
+              <button className={currentSegment > 0 ? "btn__firstpage": "btn__off"} onClick={firstpage}>First Page</button>
+              <button className={currentSegment > 0 ? "btn__showless": "btn__off"} onClick={handleClickMinus}>...</button>
           {
               segmentation[currentSegment]?.map((segment) => (
                   <li key={segment}><button type='submit' onClick={handleOffset}>{segment}</button></li> 
                   ))
                   
           }
-              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "showmore"} onClick={handleClickPlus}>...</button>
-              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "lastpage"} onClick={lastpage}>Last Page</button>
+              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "btn__showmore"} onClick={handleClickPlus}>...</button>
+              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "btn__lastpage"} onClick={lastpage}>Last Page</button>
           </ul>
         )
 
     } else {
         return (
             <ul>
-                <button className="backbtn" onClick={handleBack}>Back</button>
+                <button className="btn__back" onClick={handleBack}>Back</button>
             </ul>
         )
     }
