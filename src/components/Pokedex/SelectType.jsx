@@ -16,13 +16,11 @@ const SelectType = () => {
 
   return (
     <select className="searchbar__select">
-        <options value="All">
             {
                 listTypes?.map(type => {
                     return <option value={type.name}>{type.name}</option>
                 })
             }
-        </options>
     </select>
   )
 }
