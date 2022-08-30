@@ -15,11 +15,21 @@ const Pokedex = () => {
   const [pokemons, setPokemons] = useState();
   const [pokeSearch, setPokeSearch] = useState("");
   const [typeSelected, setTypeSelected] = useState()
+  const [displayType, setDisplayType] = useState()
 
-  console.log(typeSelected)
+    let url_type = `https://pokeapi.co/api/v2/type/${typeSelected}`
 
-  useEffect(() => {
-    if (pokeSearch) {
+    useEffect( ()=> {
+        axios.get(url_type)
+            .then(res => setDisplayType(res.data.pokemon))
+            .catch(err => console.log(err))
+    }, [typeSelected])
+
+    console.log(displayType[0].pokemon.url)
+
+
+    useEffect(() => {
+   if (pokeSearch) {
       const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`;
       const obj = {
         results: [
@@ -33,8 +43,8 @@ const Pokedex = () => {
       const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
       axios
         .get(URL)
-        .then((res) => setPokemons(res.data))
-        .catch((err) => console.log(err));
+            .then((res) => setPokemons(res.data))
+            .catch((err) => console.log(err));
     }
   }, [offset, pokeSearch]);
 
