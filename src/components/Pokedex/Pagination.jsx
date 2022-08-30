@@ -1,6 +1,7 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react'
 
-const Pagination = ({totalPokemons, offset, limit, setOffset}) => {
+const Pagination = ({totalPokemons, offset, limit, setOffset, setPokemons, setPokeSearch}) => {
 
     const pageNumbers = [];
     let pokemonsPerPage = 20;
@@ -48,21 +49,35 @@ const Pagination = ({totalPokemons, offset, limit, setOffset}) => {
         setOffset(offset = (pageNumbers.length - 1) * limit)
         setCurrentSegment(segmentationTopIndex - 1)
     }
- 
-  return (
-      <ul>
-        <button className={currentSegment > 0 ? "firstpage": "btn__off"} onClick={firstpage}>First Page</button>
-        <button className={currentSegment > 0 ? "showless": "btn__off"} onClick={handleClickMinus}>...</button>
-    {
-        segmentation[currentSegment]?.map((segment) => (
-            <li key={segment}><button type='submit' onClick={handleOffset}>{segment}</button></li> 
-            ))
-            
+    
+    const handleBack = (e) => {
+        setPokeSearch('')
     }
-        <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "showmore"} onClick={handleClickPlus}>...</button>
-        <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "lastpage"} onClick={lastpage}>Last Page</button>
-    </ul>
-  )
+    
+    if (totalPokemons) {
+        return (
+            <ul>
+              <button className={currentSegment > 0 ? "firstpage": "btn__off"} onClick={firstpage}>First Page</button>
+              <button className={currentSegment > 0 ? "showless": "btn__off"} onClick={handleClickMinus}>...</button>
+          {
+              segmentation[currentSegment]?.map((segment) => (
+                  <li key={segment}><button type='submit' onClick={handleOffset}>{segment}</button></li> 
+                  ))
+                  
+          }
+              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "showmore"} onClick={handleClickPlus}>...</button>
+              <button className={currentSegment == segmentationTopIndex-1 ? "btn__off": "lastpage"} onClick={lastpage}>Last Page</button>
+          </ul>
+        )
+
+    } else {
+        return (
+            <ul>
+                <button className="backbtn" onClick={handleBack}>Back</button>
+            </ul>
+        )
+    }
+
 }
 
 export default Pagination

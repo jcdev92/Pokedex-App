@@ -8,8 +8,8 @@ const SearchInput = ({setPokeSearch}) => {
     }
 
   return (
-    <form action="">
-      <input type="text" id="searchText" onSubmit={handleSubmit} placeholder="Search Pokemon" />
+    <form onSubmit={handleSubmit}>
+      <input type="text" id="searchText" placeholder="Search Pokemon" />
       <button>Search</button>
     </form>
   )
