@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const SelectType = () => {
+const SelectType = ({setTypeSelected}) => {
     const [listTypes, setListTypes] = useState([])
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/type')
@@ -13,9 +13,12 @@ const SelectType = () => {
         )
     }, [])
 
+    const handleChange = e => {
+        setTypeSelected(e.target.value)
+    }
 
   return (
-    <select className="searchbar__select">
+    <select className="searchbar__select" onChange={handleChange}>
             {
                 listTypes?.map(type => {
                     return <option value={type.name}>{type.name}</option>

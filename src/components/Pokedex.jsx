@@ -14,6 +14,9 @@ const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState();
   const [pokeSearch, setPokeSearch] = useState("");
+  const [typeSelected, setTypeSelected] = useState()
+
+  console.log(typeSelected)
 
   useEffect(() => {
     if (pokeSearch) {
@@ -60,7 +63,7 @@ const Pokedex = () => {
           <div className="searchbar__input">
             <SearchInput setPokeSearch={setPokeSearch} />
           </div>
-          <SelectType />
+          <SelectType setTypeSelected={setTypeSelected}/>
         </div>
       </div>
       <div className="pokedex__cards">
