@@ -2,22 +2,31 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PokemonCard from './Pokedex/PokemonCard'
-import Pagination from './Pagination'
+import Pagination from './Pokedex/Pagination'
+import SearchInput from './Pokedex/SearchInput'
 
 const Pokedex = () => {
 
   const nameTrainer = useSelector(state => state.nameTrainer)
 
+  const [offset, setOffset] = useState(0)
+  const [limit, setLimit] = useState(20) 
+
   const [pokemons, setPokemons] = useState()
+  const [pokeSearch, setPokeSearch] = useState('')
+
+  let URL 
+    pokeSearch ? URL = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}` : URL =`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
   useEffect(() => {
-    const URL = 'https://pokeapi.co/api/v2/pokemon?offset=20&limit=20'
     axios.get(URL)
       .then(res => setPokemons(res.data))
       .catch(err => console.log(err))
-  }, [])
+  }, [offset, pokeSearch])
 
-  console.log(pokemons)
+  const totalPokemons = pokemons?.count
+
+
 
   return (
     <section className="pokedex">
@@ -35,8 +44,7 @@ const Pokedex = () => {
         </h1>
         <div className="searchbar__container">
           <div className="searchbar__input">
-            <input type="text" />
-            <button type="button">Search</button>
+            <SearchInput setPokeSearch={setPokeSearch}/>
           </div>
           <select className="searchbar__select"></select>
         </div>
@@ -52,7 +60,7 @@ const Pokedex = () => {
         }
       </div>
       <div className="pagination">
-        <Pagination />
+        <Pagination totalPokemons={totalPokemons} offset={offset} limit={limit} setOffset={setOffset}/>
       </div>
     </section>
   )

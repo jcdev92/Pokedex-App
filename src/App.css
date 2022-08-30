@@ -301,9 +301,37 @@ body {
 }
 
 
+/* ---------------------------------- PAGINATION STYLES ---------------------------------------- */
+
+
 .pagination {
     width: 60%;
-    height: 70px;
     background-color: var(--color-quaternary);
     margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+.pagination ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pagination a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--color-tertiary);
+}
+
+.btn__off {
+    display: none;
 }
