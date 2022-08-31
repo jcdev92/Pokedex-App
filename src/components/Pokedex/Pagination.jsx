@@ -59,10 +59,11 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setTypeSelected, s
 
 
     /* ---------------------------------- Type Pokemons Pagination ---------------------------------- */
+    
 
 
 
-    if (totalPokemons || totalPokemonsLength) {
+    if (totalPokemons) {
         return (
             <ul>
               <button className={currentSegment > 0 ? "btn__firstpage": "btn__off"} onClick={firstpage}>First Page</button>
