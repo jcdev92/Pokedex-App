@@ -46,7 +46,7 @@ const Pokedex = () => {
     }
   }, [offset, pokeSearch, typeSelected]);
 
-  const totalPokemons = pokemons?.count ? pokemons?.count : totalPokemonLength;
+  let totalPokemons = pokemons?.count ? pokemons?.count : totalPokemonLength;
 
   const handleReset = () => {
     setPokeSearch("");
@@ -79,6 +79,7 @@ const Pokedex = () => {
             <SearchInput
               setPokeSearch={setPokeSearch}
               setTypeSelected={setTypeSelected}
+              setTotalPokemonLength={setTotalPokemonLength}
             />
           </div>
           <SelectType
