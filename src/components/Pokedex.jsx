@@ -17,7 +17,6 @@ const Pokedex = () => {
   const [pokeSearch, setPokeSearch] = useState("");
   const [typeSelected, setTypeSelected] = useState('All')
 
-
     // console.log(displayType[0].pokemon.url)
 
 
@@ -36,8 +35,10 @@ const Pokedex = () => {
                const arr = res.data.pokemon.map(e => e.pokemon)
                setTotalPokemonLength(arr.length)
                setPokemons({results: arr})
+
            })
            .catch((err) => console.log(err));
+            console.log(pokemons)
    }
     else {
       const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;

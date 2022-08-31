@@ -17,7 +17,6 @@ const PokemonCard = ({url, totalPokemonLength, limit, offset}) => {
       .catch(err => console.log(err))
   }, [])
 
-  console.log(pokemon)
 
   const handleClick = () => navigate(`/pokedex/${pokemon?.name}`)
 

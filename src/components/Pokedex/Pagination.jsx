@@ -6,7 +6,7 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setTypeSelected, s
     /* ---------------------------------- All Pokemons Pagination ---------------------------------- */
 
     const pageNumbers = [];
-    let pokemonsPerPage = 20;
+    let pokemonsPerPage = limit;
 
     for (let i = 1; i <= Math.ceil(totalPokemons / pokemonsPerPage); i++) {
         pageNumbers.push(i)
