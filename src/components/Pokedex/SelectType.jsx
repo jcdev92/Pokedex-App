@@ -20,6 +20,7 @@ const SelectType = ({setTypeSelected, typeSelected, setPokeSearch}) => {
 
   return (
     <select value={typeSelected} className="searchbar__select" onChange={handleChange}>
+        <option value="All">All</option>
             {
                 listTypes?.map(type => {
                     return <option value={type.name}>{type.name}</option>

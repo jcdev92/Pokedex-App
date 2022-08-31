@@ -47,6 +47,7 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setTypeSelected, s
         setOffset(offset = 0)
         setCurrentSegment(0)
     }
+    
     const lastpage = () => {
         setOffset(offset = (pageNumbers.length - 1) * limit)
         setCurrentSegment(segmentationTopIndex - 1)

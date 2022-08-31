@@ -134,6 +134,12 @@ body {
     background-color: var(--color-tertiary);
     position: absolute;
     border: 10px solid var(--color-secondary);
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+.box__ball:hover {
+    transform: scale(1.1);
 }
 
 .in {

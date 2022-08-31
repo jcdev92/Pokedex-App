@@ -51,6 +51,13 @@ const Pokedex = () => {
 
   const totalPokemons = pokemons?.count ? pokemons?.count : totalPokemonLength;
 
+  const handleReset = () => {
+    setPokeSearch('')
+    setTypeSelected('All')
+    setOffset(0)
+    setLimit(20)
+}
+
 
   return (
     <section className="pokedex">
@@ -62,7 +69,7 @@ const Pokedex = () => {
         />
         <div className="box__red box__red--header"></div>
         <div className="box__black box__black--header"></div>
-        <div className="box__ball box__ball--header">
+        <div className="box__ball box__ball--header" onClick={handleReset}>
           <div className="box__ball in in--header"></div>
         </div>
       </header>
@@ -91,7 +98,6 @@ const Pokedex = () => {
           setOffset={setOffset}
           setPokemons={setPokemons}
           setPokeSearch={setPokeSearch}
-          setTypeSelected={setTypeSelected}
         />
       </div>
     </section>
