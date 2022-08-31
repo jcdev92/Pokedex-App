@@ -6,49 +6,52 @@ import Pagination from "./Pokedex/Pagination";
 import SearchInput from "./Pokedex/SearchInput";
 import SelectType from "./Pokedex/SelectType";
 
+
 const Pokedex = () => {
   const nameTrainer = useSelector((state) => state.nameTrainer);
 
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(20);
-
+  const [totalPokemonLength, setTotalPokemonLength] = useState(0)
   const [pokemons, setPokemons] = useState();
   const [pokeSearch, setPokeSearch] = useState("");
-  const [typeSelected, setTypeSelected] = useState()
-  const [displayType, setDisplayType] = useState()
+  const [typeSelected, setTypeSelected] = useState('All')
 
-    let url_type = `https://pokeapi.co/api/v2/type/${typeSelected}`
 
-    useEffect( ()=> {
-        axios.get(url_type)
-            .then(res => setDisplayType(res.data.pokemon))
-            .catch(err => console.log(err))
-    }, [typeSelected])
-
-    console.log(displayType[0].pokemon.url)
+    // console.log(displayType[0].pokemon.url)
 
 
     useEffect(() => {
    if (pokeSearch) {
-      const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`;
-      const obj = {
-        results: [
-          {
-            url,
-          },
-        ],
-      };
-      setPokemons(obj);
-    } else {
+       const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`;
+       const obj = {
+           results: [{url}]
+       };
+       setPokemons(obj);
+   } else if (typeSelected !== 'All') {
+       const URL = `https://pokeapi.co/api/v2/type/${typeSelected}`;
+       axios
+       .get(URL)
+           .then((res) => {
+               const arr = res.data.pokemon.map(e => e.pokemon)
+               let sum = 0
+               const arrlength = res.data.pokemon.map((e) => sum+=1)
+               setTotalPokemonLength(sum)
+               setPokemons({results: arr})
+           })
+           .catch((err) => console.log(err));
+   }
+    else {
       const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
       axios
         .get(URL)
             .then((res) => setPokemons(res.data))
             .catch((err) => console.log(err));
     }
-  }, [offset, pokeSearch]);
+  }, [offset, pokeSearch, typeSelected]);
 
-  const totalPokemons = pokemons?.count;
+  const totalPokemons = pokemons?.count
+
 
   return (
     <section className="pokedex">
@@ -71,9 +74,9 @@ const Pokedex = () => {
         </h1>
         <div className="searchbar__container">
           <div className="searchbar__input">
-            <SearchInput setPokeSearch={setPokeSearch} />
+            <SearchInput setPokeSearch={setPokeSearch} setTypeSelected={setTypeSelected} />
           </div>
-          <SelectType setTypeSelected={setTypeSelected}/>
+          <SelectType setTypeSelected={setTypeSelected} typeSelected={typeSelected} setPokeSearch={setPokeSearch}/>
         </div>
       </div>
       <div className="pokedex__cards">
@@ -89,6 +92,7 @@ const Pokedex = () => {
           setOffset={setOffset}
           setPokemons={setPokemons}
           setPokeSearch={setPokeSearch}
+          setTypeSelected={setTypeSelected}
         />
       </div>
     </section>

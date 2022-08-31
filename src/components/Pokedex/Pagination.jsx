@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 
-const Pagination = ({totalPokemons, offset, limit, setOffset, setPokemons, setPokeSearch}) => {
+const Pagination = ({totalPokemons, offset, limit, setOffset, setTypeSelected, setPokeSearch}) => {
+
+
+    /* ---------------------------------- All Pokemons Pagination ---------------------------------- */
 
     const pageNumbers = [];
     let pokemonsPerPage = 20;
@@ -19,13 +22,13 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setPokemons, setPo
     const segmentationTopIndex = segmentation.length;
     const [currentSegment, setCurrentSegment] = useState(0);
 
-    const handleClickPlus = (e) => {
+    const handleClickPlus = () => {
         if (currentSegment < segmentationTopIndex - 1) {
             setCurrentSegment(currentSegment + 1)
         }
     }
 
-    const handleClickMinus = (e) => {
+    const handleClickMinus = () => {
         if (currentSegment > 0) {
             setCurrentSegment(currentSegment - 1)
         }
@@ -40,20 +43,26 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setPokemons, setPo
         }
     }
 
-    const firstpage = (e) => {
+    const firstpage = () => {
         setOffset(offset = 0)
         setCurrentSegment(0)
     }
-    const lastpage = (e) => {
+    const lastpage = () => {
         setOffset(offset = (pageNumbers.length - 1) * limit)
         setCurrentSegment(segmentationTopIndex - 1)
     }
     
-    const handleBack = (e) => {
+    const handleBack = () => {
         setPokeSearch('')
+        setTypeSelected('All')
     }
-    
-    if (totalPokemons) {
+
+
+    /* ---------------------------------- Type Pokemons Pagination ---------------------------------- */
+
+
+
+    if (totalPokemons || totalPokemonsLength) {
         return (
             <ul>
               <button className={currentSegment > 0 ? "btn__firstpage": "btn__off"} onClick={firstpage}>First Page</button>
