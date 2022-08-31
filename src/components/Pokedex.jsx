@@ -36,7 +36,7 @@ const Pokedex = () => {
           setPokemons({ results: arr2 });
         })
         .catch((err) => console.log(err));
-      console.log(pokemons);
+        
     } else {
       const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
       axios
