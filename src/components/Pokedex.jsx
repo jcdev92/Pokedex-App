@@ -34,8 +34,8 @@ const Pokedex = () => {
            .then((res) => {
                const arr = res.data.pokemon.map(e => e.pokemon)
                setTotalPokemonLength(arr.length)
-               setPokemons({results: arr})
-
+               const arr2 = arr.slice(offset, offset + limit)
+               setPokemons({results: arr2})
            })
            .catch((err) => console.log(err));
             console.log(pokemons)
