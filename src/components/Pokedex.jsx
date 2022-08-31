@@ -6,58 +6,54 @@ import Pagination from "./Pokedex/Pagination";
 import SearchInput from "./Pokedex/SearchInput";
 import SelectType from "./Pokedex/SelectType";
 
-
 const Pokedex = () => {
   const nameTrainer = useSelector((state) => state.nameTrainer);
 
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(20);
-  const [totalPokemonLength, setTotalPokemonLength] = useState(0)
+  const [totalPokemonLength, setTotalPokemonLength] = useState(0);
   const [pokemons, setPokemons] = useState();
   const [pokeSearch, setPokeSearch] = useState("");
-  const [typeSelected, setTypeSelected] = useState('All')
+  const [typeSelected, setTypeSelected] = useState("All");
 
-    // console.log(displayType[0].pokemon.url)
+  // console.log(displayType[0].pokemon.url)
 
-
-    useEffect(() => {
-   if (pokeSearch) {
-       const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`;
-       const obj = {
-           results: [{url}]
-       };
-       setPokemons(obj);
-   } else if (typeSelected !== 'All') {
-       const URL = `https://pokeapi.co/api/v2/type/${typeSelected}`;
-       axios
-       .get(URL)
-           .then((res) => {
-               const arr = res.data.pokemon.map(e => e.pokemon)
-               setTotalPokemonLength(arr.length)
-               const arr2 = arr.slice(offset, offset + limit)
-               setPokemons({results: arr2})
-           })
-           .catch((err) => console.log(err));
-            console.log(pokemons)
-   }
-    else {
+  useEffect(() => {
+    if (pokeSearch) {
+      const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`;
+      const obj = {
+        results: [{ url }],
+      };
+      setPokemons(obj);
+    } else if (typeSelected !== "All") {
+      const URL = `https://pokeapi.co/api/v2/type/${typeSelected}`;
+      axios
+        .get(URL)
+        .then((res) => {
+          const arr = res.data.pokemon.map((e) => e.pokemon);
+          setTotalPokemonLength(arr.length);
+          const arr2 = arr.slice(offset, offset + limit);
+          setPokemons({ results: arr2 });
+        })
+        .catch((err) => console.log(err));
+      console.log(pokemons);
+    } else {
       const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
       axios
         .get(URL)
-            .then((res) => setPokemons(res.data))
-            .catch((err) => console.log(err));
+        .then((res) => setPokemons(res.data))
+        .catch((err) => console.log(err));
     }
   }, [offset, pokeSearch, typeSelected]);
 
   const totalPokemons = pokemons?.count ? pokemons?.count : totalPokemonLength;
 
   const handleReset = () => {
-    setPokeSearch('')
-    setTypeSelected('All')
-    setOffset(0)
-    setLimit(20)
-}
-
+    setPokeSearch("");
+    setTypeSelected("All");
+    setOffset(0);
+    setLimit(20);
+  };
 
   return (
     <section className="pokedex">
@@ -80,14 +76,28 @@ const Pokedex = () => {
         </h1>
         <div className="searchbar__container">
           <div className="searchbar__input">
-            <SearchInput setPokeSearch={setPokeSearch} setTypeSelected={setTypeSelected} />
+            <SearchInput
+              setPokeSearch={setPokeSearch}
+              setTypeSelected={setTypeSelected}
+            />
           </div>
-          <SelectType setTypeSelected={setTypeSelected} typeSelected={typeSelected} setPokeSearch={setPokeSearch}/>
+          <SelectType
+            setTypeSelected={setTypeSelected}
+            typeSelected={typeSelected}
+            setPokeSearch={setPokeSearch}
+            setLimit={setLimit}
+            setOffset={setOffset}
+          />
         </div>
       </div>
       <div className="pokedex__cards">
         {pokemons?.results.map((pokemon) => (
-          <PokemonCard key={pokemon.url} url={pokemon.url} totalPokemonLength={totalPokemonLength} limit={limit}/>
+          <PokemonCard
+            key={pokemon.url}
+            url={pokemon.url}
+            totalPokemonLength={totalPokemonLength}
+            limit={limit}
+          />
         ))}
       </div>
       <div className="pagination">

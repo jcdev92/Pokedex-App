@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const SelectType = ({setTypeSelected, typeSelected, setPokeSearch}) => {
+const SelectType = ({setTypeSelected, typeSelected, setPokeSearch, setLimit, setOffset}) => {
     const [listTypes, setListTypes] = useState([])
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/type')
@@ -16,6 +16,8 @@ const SelectType = ({setTypeSelected, typeSelected, setPokeSearch}) => {
     const handleChange = e => {
         setTypeSelected(e.target.value)
         setPokeSearch('')
+        setOffset(0)
+        setLimit(20)
     }
 
   return (
