@@ -19,12 +19,7 @@ const PokemonCard = ({url, totalPokemonLength, limit, offset}) => {
 
   console.log(pokemon)
 
-  
   const handleClick = () => navigate(`/pokedex/${pokemon?.name}`)
-
-
-
-
 
   return (
     <article onClick={handleClick} className='card'>

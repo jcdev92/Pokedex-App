@@ -34,9 +34,7 @@ const Pokedex = () => {
        .get(URL)
            .then((res) => {
                const arr = res.data.pokemon.map(e => e.pokemon)
-               let sum = 0
-               const arrlength = res.data.pokemon.map((e) => sum+=1)
-               setTotalPokemonLength(sum)
+               setTotalPokemonLength(arr.length)
                setPokemons({results: arr})
            })
            .catch((err) => console.log(err));
