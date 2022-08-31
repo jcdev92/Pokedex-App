@@ -50,7 +50,7 @@ const Pokedex = () => {
     }
   }, [offset, pokeSearch, typeSelected]);
 
-  const totalPokemons = pokemons?.count
+  const totalPokemons = pokemons?.count ? pokemons?.count : totalPokemonLength;
 
 
   return (
@@ -81,7 +81,7 @@ const Pokedex = () => {
       </div>
       <div className="pokedex__cards">
         {pokemons?.results.map((pokemon) => (
-          <PokemonCard key={pokemon.url} url={pokemon.url} />
+          <PokemonCard key={pokemon.url} url={pokemon.url} totalPokemonLength={totalPokemonLength} limit={limit}/>
         ))}
       </div>
       <div className="pagination">

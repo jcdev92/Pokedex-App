@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import StatPokemon from './StatPokemon'
 
-const PokemonCard = ({url}) => {
+const PokemonCard = ({url, totalPokemonLength, limit, offset}) => {
 
   const [pokemon, setPokemon] = useState()
 
@@ -11,11 +11,20 @@ const PokemonCard = ({url}) => {
 
   useEffect(() => {
     axios.get(url)
-      .then(res => setPokemon(res.data))
+      .then(res => {
+        setPokemon(res.data)
+      })
       .catch(err => console.log(err))
   }, [])
 
+  console.log(pokemon)
+
+  
   const handleClick = () => navigate(`/pokedex/${pokemon?.name}`)
+
+
+
+
 
   return (
     <article onClick={handleClick} className='card'>

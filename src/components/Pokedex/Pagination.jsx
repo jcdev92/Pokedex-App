@@ -59,7 +59,6 @@ const Pagination = ({totalPokemons, offset, limit, setOffset, setTypeSelected, s
 
 
     /* ---------------------------------- Type Pokemons Pagination ---------------------------------- */
-    
 
 
 
