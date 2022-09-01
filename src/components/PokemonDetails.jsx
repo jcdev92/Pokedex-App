@@ -44,7 +44,12 @@ const PokemonDetails = () => {
               <img src={pokemon?.sprites.other["official-artwork"]["front_default"]}
               alt={name} />
             </div> 
-            <h1 className="pokemon__details details__body name ">{name}</h1>
+            <h1 className="pokemon__details pokemon__id">{`#${pokemon?.id}`}</h1>
+            <div className="pokemon__details details__body name ">
+              <div className="name__line"></div>
+              <h1>{name}</h1>
+              <div className="name__line"></div>
+            </div>
             <li className="pokemon__details details__bod list__sizes">
               <span className="pokemon__details details__bod list__sizes--span">
                 <h3>Height</h3>
@@ -55,22 +60,34 @@ const PokemonDetails = () => {
                 <p>{pokemon?.weight}</p>
               </span>
             </li>  
-            <li className="pokemon__details details__body  list__abilities">
+            <li className="pokemon__details details__body list__abilities">
               <span className="pokemon__details details__bod list__abilities--span">
                 <div className="pokemon__details details__body sub__title">
                   <h3>Types</h3>
                 </div>
-                <p>
-                  {pokemon?.types.map((type) => `${type.type.name} `)}
-                </p>
+                <div className="pokemon__details details__body type__abilities">
+                  {pokemon?.types.map((type, index) => {
+                    return (
+                      <span key={index} className="pokemon__details sub__span">
+                        <h3>{type.type.name}</h3>
+                      </span>
+                    );
+                  })}
+                </div>
               </span>
               <span className="pokemon__details details__bod list__abilities--span">
                 <div className="pokemon__details details__body sub__title">
                   <h3>Abilities</h3>
                 </div>
-                <p>
-                  {pokemon?.abilities.map((ability) => `${ability.ability.name} `)}
-                </p>
+                <div className="pokemon__details details__body type__abilities">
+                  {pokemon?.abilities.map((ability, index) => {
+                    return (
+                      <span key={index} className="pokemon__details sub__span">
+                        <h3>{ability.ability.name}</h3>
+                      </span>
+                    );
+                  })}
+                </div>
               </span>
             </li>
         </body>

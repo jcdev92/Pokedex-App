@@ -356,6 +356,7 @@ body {
     border: 1px solid var(--color-secondary);
     font-size: 1.3rem;
     font-family: oswald, sans-serif;
+
 }
 
 .pokemon__details, .pokemon__moves {
@@ -363,6 +364,14 @@ body {
     height: 100%;
     padding: 2rem;
 }
+
+
+.pokemon__id {
+    font-size: 2.5rem;
+    width: 7%;
+    padding: 0.2em;
+}
+
 
 .details__body {
     width: 100%;
@@ -376,7 +385,14 @@ body {
 .name {
     font-size: 2rem;
     color: var(--color-primary);
+    flex-flow: row wrap;
+}
 
+.name__line {
+    width: 40%;
+    height: 2px;
+    background-color: var(--color-primary);
+    opacity: 0.5;
 }
 
 .list__sizes {
@@ -393,21 +409,34 @@ body {
     font-size: 1.1rem;
 }
 
-
 .list__abilities {
-    width: 100%;
     flex-flow: row wrap;
+    padding: 0;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .list__abilities--span {
-    width: 30%;
+    width: 48%;
     height: auto;
+    padding: 0;
+    gap: 0;
+}
+
+.type__abilities {
+    flex-flow: row wrap;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sub__span {
+    width: 45%;
     padding: 0;
 }
 
-.sub__title {
-    font-size: 1.5rem;
-}
+
 
 
 .details__footer {
@@ -426,7 +455,6 @@ body {
 .moves__list {
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
