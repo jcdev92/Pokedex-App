@@ -374,7 +374,6 @@ body {
 
 .name {
     font-size: 2rem;
-    text-transform: uppercase;
     color: var(--color-primary);
 
 }
@@ -382,11 +381,11 @@ body {
 .list__sizes {
     flex-flow: row wrap;
     padding: 0;
-    width: 30%;
+    width: 100%;
 }
 
 .list__sizes--span {
-    width: 20%;
+    width: 10%;
     height: auto;
     gap: 0;
     padding: 0;
@@ -394,9 +393,18 @@ body {
 }
 
 
+.list__abilities {
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.list__abilities--span {
+    width: 30%;
+    height: auto;
+}
+
+
 .details__footer {
-    display: flex;
-    flex-flow: column wrap;
     align-items: start;
     width: 100%;
 }

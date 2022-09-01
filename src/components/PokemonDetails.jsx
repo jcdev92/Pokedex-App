@@ -55,18 +55,20 @@ const PokemonDetails = () => {
                 <p>{pokemon?.weight}</p>
               </span>
             </li>  
-          <ul className="pokemon__details details__body list">
-            <li className="list__abilities">
-              <h3>Types</h3>
-              <p>
-                {pokemon?.types.map((type) => type.type.name)}
-              </p>
-              <h3>Abilities</h3>
-              <p>
-                {pokemon?.abilities.map((ability) => ability.ability.name)}
-              </p>
+            <li className="pokemon__details details__body  list__abilities">
+              <span className="pokemon__details details__bod list__abilities--span">
+                <h3>Types</h3>
+                <p>
+                  {pokemon?.types.map((type) => type.type.name)}
+                </p>
+              </span>
+              <span className="pokemon__details details__bod list__abilities--span">
+                <h3>Abilities</h3>
+                <p>
+                  {pokemon?.abilities.map((ability) => ability.ability.name)}
+                </p>
+              </span>
             </li>
-          </ul>
         </body>
         <footer className="pokemon__details details__footer">
           <h1 className="pokemon__details details__footer details__footer__name">Stats</h1>
