@@ -39,13 +39,13 @@ const PokemonDetails = () => {
         </div>
       </header>
       <article className="pokemon__details">
-        <body className="pokemon__details pokemon__details__body">
+        <body className="pokemon__details details__body">
             <img
               src={pokemon?.sprites.other["official-artwork"]["front_default"]}
               alt={name}
             />
-            <h1 className="pokemon__details pokemon__details__body pokemon__details__body__name ">{name}</h1>
-          <ul className="pokemon__details__body pokemon__details__body__list">
+            <h1 className="pokemon__details details__body details__body__name ">{name}</h1>
+          <ul className="details__body details__body__list">
           <li className="">
               <h3 className="">Weight</h3>
               <p className="">
@@ -64,9 +64,9 @@ const PokemonDetails = () => {
             </li>
           </ul>
         </body>
-        <footer className="pokemon__details pokemon__details__footer">
-          <h1 className="pokemon__details pokemon__details__footer pokemon__details__footer__name">Stats</h1>
-          <ul className="pokemon__details pokemon__details__footer pokemon__details__footer__list">
+        <footer className="pokemon__details details__footer">
+          <h1 className="pokemon__details details__footer details__footer__name">Stats</h1>
+          <ul className="pokemon__details details__footer details__footer__list">
             {pokemon?.stats.map((stat) => (
               <li className="pokemon__footer pokemon__list-item" key={stat.stat.url}>
                 <h3 className="pokemon__footer pokemon__list-item-title">{stat.stat.name}</h3>
@@ -77,14 +77,14 @@ const PokemonDetails = () => {
         </footer>
       </article>
       <article className="pokemon__moves">
-        <header className="pokemon__moves pokemon__moves__header">
-          <h1 className="pokemon__moves__name">Moves</h1>
+        <header className="pokemon__moves header">
+          <h1 className="pokemon__moves name">Moves</h1>
         </header>
-        <body className="pokemon__moves__body">
-          <ul className="pokemon__moves__list">
+        <body className="pokemon__moves body">
+          <ul className="pokemon__moves list">
             {pokemon?.moves.map((move) => (
-              <li className="pokemon__list-item" key={move.move.url}>
-                <h3 className="pokemon__list-item-title">{move.move.name}</h3>
+              <li className="pokemon__moves list__item" key={move.move.url}>
+                <h3 className="pokemon__move list__item-title">{move.move.name}</h3>
               </li>
             ))}
           </ul>

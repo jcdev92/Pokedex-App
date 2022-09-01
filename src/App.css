@@ -345,7 +345,7 @@ body {
 
 /* ---------------------------------- POKEMON STYLES ---------------------------------------- */
 
-.details {
+.details, .pokemon__details, .pokemon__moves  {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -355,21 +355,18 @@ body {
     gap: 2rem;
 }
 
-.pokemon__details {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
+.pokemon__details, .pokemon__moves {
+    width: 70%;
     height: 100%;
     border: 1px solid var(--color-secondary);
+    gap: 0;
 }
 
-.pokemon__details__body {
+.details__body {
     width: 100%;
 }
 
-.pokemon__details__body__list {
+.details__body__list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -378,7 +375,7 @@ body {
 }
 
 
-.pokemon__details__footer {
+.details__footer {
     display: flex;
     flex-flow: column wrap;
     align-items: start;
@@ -386,9 +383,10 @@ body {
     gap: 1rem;
 }
 
-.pokemon__details__footer__name {
+.details__footer__name {
     align-items: center;
 }
+
 
 
 
