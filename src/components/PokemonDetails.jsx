@@ -44,21 +44,25 @@ const PokemonDetails = () => {
               <img src={pokemon?.sprites.other["official-artwork"]["front_default"]}
               alt={name} />
             </div> 
-            <h1 className="pokemon__details details__body details__body__name ">{name}</h1>
-          <ul className="pokemon__details details__body details__body__list">
-          <li className="">
-              <h3 className="">Weight</h3>
-              <p className="">{pokemon?.weight}</p>
-              <h3 className="">Types</h3>
-              <p className="">
+            <h1 className="pokemon__details details__body name ">{name}</h1>
+            <li className="pokemon__details details__bod list__sizes">
+              <span className="pokemon__details details__bod list__sizes--span">
+                <h3>Height</h3>
+                <p>{pokemon?.height}</p>
+              </span>
+              <span className="pokemon__details details__bod list__sizes--span">
+                <h3>Weight</h3>
+                <p>{pokemon?.weight}</p>
+              </span>
+            </li>  
+          <ul className="pokemon__details details__body list">
+            <li className="list__abilities">
+              <h3>Types</h3>
+              <p>
                 {pokemon?.types.map((type) => type.type.name)}
               </p>
-            </li>  
-            <li className="">
-              <h3 className="">Height</h3>
-              <p className="">{pokemon?.height}</p>
-              <h3 className="">Abilities</h3>
-              <p className="">
+              <h3>Abilities</h3>
+              <p>
                 {pokemon?.abilities.map((ability) => ability.ability.name)}
               </p>
             </li>

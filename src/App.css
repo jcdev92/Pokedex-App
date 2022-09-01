@@ -354,6 +354,7 @@ body {
     height: 100%;
     gap: 2rem;
     border: 1px solid var(--color-secondary);
+    font-size: 1.3rem;
 }
 
 .pokemon__details, .pokemon__moves {
@@ -371,10 +372,25 @@ body {
     height: auto;
 }
 
-.details__body__list {
+.name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+}
+
+.list__sizes {
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    width: 30%;
+}
+
+.list__sizes--span {
+    width: 20%;
+    height: auto;
+    gap: 0;
+    padding: 0;
+    font-size: 1.1rem;
 }
 
 
@@ -435,6 +451,17 @@ body {
     }
     .box__black--header {
         height: 25%;
+    }
+
+    
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 1.2rem;
+    }
+    .pokemon__details, .pokemon__moves {
+        padding: 0.5rem;
     }
 
     
