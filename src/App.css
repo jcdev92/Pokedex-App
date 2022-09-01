@@ -387,6 +387,61 @@ body {
     align-items: center;
 }
 
+.moves__body {
+    width: 100%;
+    padding: 2rem;
+}
+
+.moves__list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    
+}
+
+.list__item {
+    width: 18%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .pokemon__details, .pokemon__moves {
+        width: 100%;
+    }
+
+    .pokedex__box {
+        width: 100%;
+    }
+
+    .pokedex__img {
+        width: 60%;
+        height: auto;
+    }
+
+    .pokedex__cards {
+        width: 100%;
+    }
+    
+    .box__ball--header {
+        top: 50%;
+        left: 70%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .box__red--header {
+        height: 75%;
+    }
+    .box__black--header {
+        height: 25%;
+    }
+
+    
+}
+    
+
 
 
 

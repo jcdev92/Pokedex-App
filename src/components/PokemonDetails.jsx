@@ -77,11 +77,11 @@ const PokemonDetails = () => {
         </footer>
       </article>
       <article className="pokemon__moves">
-        <header className="pokemon__moves header">
-          <h1 className="pokemon__moves name">Moves</h1>
+        <header className="pokemon__moves moves__header">
+          <h1 className="pokemon__moves moves__name">Moves</h1>
         </header>
-        <body className="pokemon__moves body">
-          <ul className="pokemon__moves list">
+        <body className="pokemon__moves moves__body">
+          <ul className="pokemon__moves moves__list">
             {pokemon?.moves.map((move) => (
               <li className="pokemon__moves list__item" key={move.move.url}>
                 <h3 className="pokemon__move list__item-title">{move.move.name}</h3>
