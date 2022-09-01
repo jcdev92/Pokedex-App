@@ -28,6 +28,7 @@ img {
 
 body {
     line-height: 1.6;
+    background-color: var(--color-tertiary);
   }
 
 
@@ -162,7 +163,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: var(--color-tertiary);
+    
 }
 
 .pokedex__img {
@@ -341,3 +342,60 @@ body {
 .btn__off {
     display: none;
 }
+
+
+/* ---------------------------------- POKEMON STYLES ---------------------------------------- */
+
+.details {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.pokemon__details {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    border: 1px solid var(--color-secondary);
+}
+
+.pokemon__details__body {
+    width: 100%;
+}
+
+.pokemon__details__body__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.pokemon__details__footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.pokemon__details__footer__name {
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
