@@ -92,7 +92,9 @@ const PokemonDetails = () => {
             </li>
         </body>
         <footer className="pokemon__details details__footer">
-          <h1 className="pokemon__details details__footer details__footer__name">Stats</h1>
+          <div className="pokemon__details details__footer details__footer__name">
+            <h1>Stats</h1> <div className="title__line"></div>
+          </div>
           <ul className="pokemon__details details__footer details__footer__list">
             {pokemon?.stats.map((stat) => (
               <li className="pokemon__footer pokemon__list-item" key={stat.stat.url}>
@@ -105,7 +107,7 @@ const PokemonDetails = () => {
       </article>
       <article className="pokemon__moves">
         <header className="pokemon__moves moves__header">
-          <h1 className="pokemon__moves moves__name">Moves</h1>
+          <h1>Moves</h1><div className="title__line"></div>
         </header>
         <body className="pokemon__moves moves__body">
           <ul className="pokemon__moves moves__list">
