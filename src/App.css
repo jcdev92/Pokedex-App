@@ -481,11 +481,13 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
     width: 100%;
+    
 }
 
 .list__item {
     width: 18%;
     overflow: hidden;
+    font-size: var(--font-size-small);
 }
 
 @media screen and (max-width: 768px) {
