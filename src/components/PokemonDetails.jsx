@@ -38,21 +38,21 @@ const PokemonDetails = () => {
           <div className="box__ball in in--header"></div>
         </div>
       </header>
-      <article className="pokemon__details">
+      <article className="pokemon__details details__img">
         <body className="pokemon__details details__body">
-            <img
-              src={pokemon?.sprites.other["official-artwork"]["front_default"]}
-              alt={name}
-            />
+            <div className="pokemon__details pokemon__img">
+              <img src={pokemon?.sprites.other["official-artwork"]["front_default"]}
+              alt={name} />
+            </div> 
             <h1 className="pokemon__details details__body details__body__name ">{name}</h1>
-          <ul className="details__body details__body__list">
+          <ul className="pokemon__details details__body details__body__list">
           <li className="">
               <h3 className="">Weight</h3>
+              <p className="">{pokemon?.weight}</p>
+              <h3 className="">Types</h3>
               <p className="">
                 {pokemon?.types.map((type) => type.type.name)}
               </p>
-              <h3 className="">Types</h3>
-              <p className="">{pokemon?.weight}</p>
             </li>  
             <li className="">
               <h3 className="">Height</h3>
