@@ -380,8 +380,8 @@ body {
 
 .pokemon__id {
     font-size: 2.5rem;
-    width: 7%;
-    padding: 0.2em;
+    width: auto;
+    padding: 0.3em;
 }
 
 
@@ -524,6 +524,19 @@ body {
     }
 
     .pokedex__cards {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .searchbar__container {
+        flex-flow: column wrap;
+        width: 100%;
+    }
+
+    .searchbar__input, .searchbar__select {
         width: 100%;
     }
     
