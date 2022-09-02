@@ -18,6 +18,29 @@ html {
     --color-tertiary: #E5E5E5;
     --color-quaternary: #212121;
 
+    /* by tybes */
+    --color-normal: #0C0C0C;
+    --color-fighting: #F08080;
+    --color-flying: #A890F0;
+    --color-poison: #A040A0;
+    --color-ground: #E0C068;
+    --color-rock: #B8A038;
+    --color-bug: #A8B820;
+    --color-ghost: #705898;
+    --color-steel:  #B8B8D0;
+    --color-fire: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+    --color-water: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+    --color-grass: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    --color-electric: #F8D030;
+    --color-psychic: #F85888;
+    --color-ice: #98D8D8;
+    --color-dragon: #7038F8;
+    --color-dark: #705848;
+    --color-fairy: #EE99AC;
+    --color-unknown: #68A090;
+    --color-shadow: #000000;
+
+
     /* fonts */
     --font-primary: 'Pokemon Solid', sans-serif;  
     
