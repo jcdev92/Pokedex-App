@@ -675,6 +675,14 @@ body {
         width: 60%;
     }
 
+    .pokemon__list-item-title {
+        font-size: 1.2rem;
+    }
+
+    .pokemon__list-item-value {
+        font-size: 1.2rem;
+    }
+
     
 }
 
@@ -687,6 +695,7 @@ body {
     .details__footer__list {
         width: 100%;
         padding: 0.5rem;
+        padding-bottom: 6rem;
     }
 
     .pokemon__img {
