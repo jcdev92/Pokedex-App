@@ -453,7 +453,7 @@ body {
 }
 
 .name__line {
-    width: 40%;
+    width: 30%;
     height: 2px;
     background-color: var(--color-primary);
     opacity: 0.5;
