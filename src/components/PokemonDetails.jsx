@@ -98,8 +98,10 @@ const PokemonDetails = () => {
           <ul className="pokemon__details details__footer details__footer__list">
             {pokemon?.stats.map((stat) => (
               <li className="pokemon__footer pokemon__list-item" key={stat.stat.url}>
-                <h3 className="pokemon__footer pokemon__list-item-title">{stat.stat.name}</h3>
-                <p className="pokemon__footer pokemon__list-item-value">{`${stat.base_stat} / 150`}</p>
+                <div className="pokemon__footer pokemon__list-item-container">
+                  <h3 className="pokemon__footer pokemon__list-item-title">{stat.stat.name}</h3>
+                  <p className="pokemon__footer pokemon__list-item-value">{`${stat.base_stat} / 150`}</p>
+                </div>
                 <div className="pokemon__footer pokemon__list-item-bar" style={{ width: `${stat.base_stat}%` }}></div>
               </li>
             ))}
