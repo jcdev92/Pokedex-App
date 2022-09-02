@@ -39,11 +39,11 @@ const PokemonDetails = () => {
         </div>
       </header>
       <article className="pokemon__details details__img">
-        <div className="pokemon__details details__body">
-            <div className="pokemon__details pokemon__img">
+        <div className="pokemon__details pokemon__img">
               <img src={pokemon?.sprites.other["official-artwork"]["front_default"]}
               alt={name} />
-            </div> 
+        </div> 
+        <div className="pokemon__details details__body">
             <h1 className="pokemon__details pokemon__id">{`#${pokemon?.id}`}</h1>
             <div className="pokemon__details details__body name ">
               <div className="name__line"></div>
