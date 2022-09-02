@@ -396,7 +396,7 @@ body {
 }
 
 .details {
-    gap: 11rem;
+    gap: 15rem;
 }
 
 .pokemon__details, .pokemon__moves {
@@ -429,7 +429,7 @@ body {
     height: auto;
     z-index: 1;
     position: absolute;
-    top: -55%;
+    top: -50%;
 }
 
 .pokemon__id {
@@ -503,6 +503,7 @@ body {
     width: 45%;
     padding: 0;
     box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.2);
 }
 
 .details__footer {
@@ -547,8 +548,7 @@ body {
 
 .moves__list {
     flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
+    width: 95%;
     box-shadow: none;
     padding: 0;
 }
@@ -556,7 +556,10 @@ body {
 .list__item {
     width: 18%;
     overflow: hidden;
-    font-size: var(--font-size-small);
+    box-shadow: none;
+    padding: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
     background-color: var(--color-tertiary);
     border-radius: 50px;
 }
@@ -574,13 +577,29 @@ body {
 
 .pokemon__list-item-bar {
     width: 100%;
-    height: 10px;
-    background-color: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    height: 30px;
+    background-image: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
     opacity: 0.5;
+    border-radius: 4px;
 }
 
 
 @media screen and (max-width: 768px) {
+    .details {
+        gap: 8rem;
+    }
+    
+    .pokemon__img {
+        width: 100%;
+        height: 25vh;
+    }
+
+
+    .pokemon__img img {
+        width: 35%;
+        top: -20%;
+    }
+
     .pokemon__details, .pokemon__moves {
         width: 100%;
     }
@@ -640,17 +659,87 @@ body {
     * {
         font-size: 1.2rem;
     }
-    .pokemon__details, .pokemon__moves {
+
+
+    .details__footer__list {
+        width: 100%;
         padding: 0.5rem;
     }
 
+    .pokemon__img {
+        width: 100%;
+        height: 15vh;
+    }
+
+
+    .pokemon__img img {
+        width: 35%;
+        top: -20%;
+    }
 
 
     
 }
+
+@media screen and (max-width: 600px) {
+
+    .name__line {
+        width: 100%;
+    }
+
     
+}
+
+@media screen and (min-width: 769px) and (max-width: 1525px){
 
 
+    .list__item {
+        width: 40%;
+    }
+
+    .pokemon__img {
+        width: 100%;
+        height: 20vh;
+    }
+
+
+    .pokemon__img img {
+        width: 25%;
+        top: -60%;
+    }
+
+    .name__line {
+        width: 20%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    .pokemon__img {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .pokemon__img img {
+        width: 25%;
+        top: -20%;
+    }
+
+    .details__body {
+        padding: 0;
+    }
+
+    .list__abilities {
+        flex-flow: column wrap;
+        gap: 2rem;
+    }
+
+    .sub__span {
+        width: 100%;
+    }
+
+}
 
 
 
