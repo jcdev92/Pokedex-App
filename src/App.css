@@ -19,26 +19,26 @@ html {
     --color-quaternary: #212121;
 
     /* by tybes */
-    --color-normal: #0C0C0C;
-    --color-fighting: #F08080;
-    --color-flying: #A890F0;
-    --color-poison: #A040A0;
-    --color-ground: #E0C068;
-    --color-rock: #B8A038;
-    --color-bug: #A8B820;
-    --color-ghost: #705898;
-    --color-steel:  #B8B8D0;
+    --color-normal: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+    --color-fighting: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+    --color-flying: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+    --color-poison: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
+    --color-ground: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+    --color-rock: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+    --color-bug: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+    --color-ghost: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+    --color-steel:  linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
     --color-fire: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
     --color-water: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
     --color-grass: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
-    --color-electric: #F8D030;
-    --color-psychic: #F85888;
-    --color-ice: #98D8D8;
-    --color-dragon: #7038F8;
-    --color-dark: #705848;
-    --color-fairy: #EE99AC;
-    --color-unknown: #68A090;
-    --color-shadow: #000000;
+    --color-electric: linear-gradient(177.03deg, #F9D02C -11.97%, #F9BB16 57.49%, #F9D02C 135.64%);
+    --color-psychic: linear-gradient(177.03deg, #F95587 -11.97%, #FAC0CB 57.49%, #FDE6E9 135.64%);
+    --color-ice: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    --color-dragon: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+    --color-dark: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    --color-fairy: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+    --color-unknown: linear-gradient(177.03deg, #8C8C8C -11.97%, #B3B3B3 57.49%, #E5E5E5 135.64%);
+    --color-shadow: linear-gradient(177.03deg, #000000 -11.97%, #0D0D0D 57.49%, #5A5A5A 135.64%);
 
 
     /* fonts */
@@ -575,7 +575,7 @@ body {
 .pokemon__list-item-bar {
     width: 100%;
     height: 10px;
-    background-color: var(--color-primary);
+    background-color: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
     opacity: 0.5;
 }
 
