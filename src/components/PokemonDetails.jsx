@@ -39,7 +39,7 @@ const PokemonDetails = () => {
         </div>
       </header>
       <article className="pokemon__details details__img">
-        <body className="pokemon__details details__body">
+        <div className="pokemon__details details__body">
             <div className="pokemon__details pokemon__img">
               <img src={pokemon?.sprites.other["official-artwork"]["front_default"]}
               alt={name} />
@@ -90,7 +90,7 @@ const PokemonDetails = () => {
                 </div>
               </span>
             </li>
-        </body>
+        </div>
         <footer className="pokemon__details details__footer">
           <div className="pokemon__details details__footer details__footer__name">
             <h1>Stats</h1> <div className="title__line"></div>
@@ -99,8 +99,8 @@ const PokemonDetails = () => {
             {pokemon?.stats.map((stat) => (
               <li className="pokemon__footer pokemon__list-item" key={stat.stat.url}>
                 <h3 className="pokemon__footer pokemon__list-item-title">{stat.stat.name}</h3>
-                <p className="pokemon__footer pokemon__list-item-value">{stat.base_stat}</p>
-                  <div className="pokemon__footer pokemon__list-item-bar" style={{ width: `${stat.base_stat}%` }}></div>
+                <p className="pokemon__footer pokemon__list-item-value">{`${stat.base_stat} / 150`}</p>
+                <div className="pokemon__footer pokemon__list-item-bar" style={{ width: `${stat.base_stat}%` }}></div>
               </li>
             ))}
           </ul>
