@@ -746,6 +746,11 @@ button:hover {
 
 
 @media screen and (max-width: 768px) {
+    
+    * {
+        letter-spacing: 1px;
+    }
+
     .details {
         gap: 8rem;
     }
@@ -785,10 +790,15 @@ button:hover {
     .searchbar__container {
         flex-flow: column wrap;
         width: 100%;
+        gap: 2rem;
     }
 
     .searchbar__input, .searchbar__select {
         width: 100%;
+    }
+
+    .searchbar__input button {
+        width: 75%;
     }
     
     .box__ball--header {
