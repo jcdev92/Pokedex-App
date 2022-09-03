@@ -414,14 +414,13 @@ body {
 
 
 .pagination {
-    height: 8vh;
     background-color: var(--color-quaternary);
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
     
 }
@@ -446,6 +445,21 @@ body {
     display: none;
 }
 
+button {
+    background-color: var(--color-tertiary);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    font-size: 2rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}
 
 /* ---------------------------------- POKEMON STYLES ---------------------------------------- */
 
