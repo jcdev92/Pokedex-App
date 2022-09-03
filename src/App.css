@@ -1,5 +1,11 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 
+@font-face {
+    font-family: 'Pokemon Solid', sans-serif;
+    src: url('http://fonts.cdnfonts.com/css/pokemon-solid');
+}
+
+
 * {
   margin: 0;
   padding: 0;

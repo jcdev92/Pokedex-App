@@ -18,7 +18,6 @@ function App() {
           <Route path='/pokedex/:name' element={<PokemonDetails />} />
         </Route>
       </Routes>
-
     </div>
   )
 }
