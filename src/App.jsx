@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
       <Routes>
 
         <Route path='/' element={<Home />} />
