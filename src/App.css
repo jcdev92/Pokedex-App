@@ -40,6 +40,30 @@ html {
     --color-unknown: linear-gradient(177.03deg, #8C8C8C -11.97%, #B3B3B3 57.49%, #E5E5E5 135.64%);
     --color-shadow: linear-gradient(177.03deg, #000000 -11.97%, #0D0D0D 57.49%, #5A5A5A 135.64%);
 
+   /* font colors */
+   
+    --color-font-normal: #735259;
+    --color-font-fighting: #96402A;
+    --color-font-flying: #0C1395;
+    --color-font-poison: #5B3184;
+    --color-font-ground: #654008;
+    --color-font-rock: #7E7E7E;
+    --color-font-bug: #62DB60;
+    --color-font-ghost: #323569;
+    --color-font-steel: #5E736C;
+    --color-font-fire: #F96D6F;
+    --color-font-water: #133258;
+    --color-font-grass: #CAE099;
+    --color-font-electric: #F9D02C;
+    --color-font-psychic: #F95587;
+    --color-font-ice: #6FBEDF;
+    --color-font-dragon: #478A93;
+    --color-font-dark: #030706;
+    --color-font-fairy: #971B45;
+    --color-font-unknown: #8C8C8C;
+    --color-font-shadow: #000000;
+   
+
 
     /* fonts */
     --font-primary: 'Pokemon Solid', sans-serif;  
@@ -447,6 +471,7 @@ body {
     font-size: var(--font-size-large);
     color: var(--color-primary);
     flex-flow: row wrap;
+    text-shadow: 2px 2px 3px rgba(0,0,0);
 }
 
 .name__line {

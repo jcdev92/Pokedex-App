@@ -24,7 +24,6 @@ const PokemonDetails = () => {
     navigate("/pokedex");
   };
 
-  console.log(pokemon?.types[0].type.name);
 
   return (
     <section className="details">
@@ -56,7 +55,9 @@ const PokemonDetails = () => {
           <h1 className="pokemon__details pokemon__id">{`#${pokemon?.id}`}</h1>
           <div className="pokemon__details details__body name ">
             <div className="name__line"></div>
-            <h1>{name}</h1>
+            <h1 style={{
+            color: `var(--color-font-${pokemon?.types[0].type.name})`,
+          }}>{name}</h1>
             <div className="name__line"></div>
           </div>
           <li className="pokemon__details details__bod list__sizes">
