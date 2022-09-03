@@ -11,17 +11,12 @@ function App() {
 
   return (
     <div className="App">
-      <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"></link>
       <Routes>
-
         <Route path='/' element={<Home />} />
-
         <Route element={<ProtectedRoutes />} >
           <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:name' element={<PokemonDetails />} />
         </Route>
-
-
       </Routes>
 
     </div>
