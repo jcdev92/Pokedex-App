@@ -273,7 +273,7 @@ body {
 }
 
 .card {
-    width: 25%;
+    width: 27%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -287,7 +287,7 @@ body {
     cursor: pointer;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .card:hover {
