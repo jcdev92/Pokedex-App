@@ -408,7 +408,7 @@ body {
 .searchbar__container {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .searchbar__input {
@@ -435,8 +435,6 @@ body {
 
 }
 
-
-
 .searchbar__select {
    width: 40%;
    height: 40px;
@@ -444,6 +442,11 @@ body {
    align-items: center;
    justify-content: center;
    display: flex;
+    font-size: var(--font-size-medium);
+}
+
+.searchbar__select option {
+    font-size: var(--font-size-medium);
 }
 
 
