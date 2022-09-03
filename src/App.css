@@ -70,7 +70,7 @@ html {
     
     /* font-sizes */
     --font-size-extra-small: 0.8rem;
-    --font-size-small: 1.2rem;
+    --font-size-small: 1rem;
     --font-size-medium: 1.5rem;
     --font-size-large: 2rem;
 }
@@ -416,12 +416,25 @@ body {
 }
 
 .searchbar__input input {
-    width: 80%;
+    width: 75%;
+    height: 50px;
+    font-size: var(--font-size-medium);
 }
 
 .searchbar__input button {
-    width: 20%;
+    width: 15%;
+    font-size: var(--font-size-medium);
+    transition: transform .2s ease-in-out;
+    background-color: var(--color-quaternary);
+    color: var(--color-tertiary);
 }
+
+.searchbar__input button:hover {
+    transform: scale(1.01);
+    font-weight: bold;
+
+}
+
 
 
 .searchbar__select {
@@ -476,7 +489,7 @@ button {
     padding: 1rem 1.5rem 1rem 1.5rem;
     cursor: pointer;
     transition: transform .2s ease-in-out;
-    font-size: 2rem;
+    font-size: var(--font-size-small);
 }
 
 button:hover {
