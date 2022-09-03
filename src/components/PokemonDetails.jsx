@@ -43,7 +43,7 @@ const PokemonDetails = () => {
         <div
           className="pokemon__details pokemon__img"
           style={{
-            backgroundImage: `var(--color-${pokemon?.types[0].type.name})`,
+            backgroundImage: `var(--color-${pokemon?.types[0].type.name})`
           }}
         >
           <img
@@ -82,7 +82,7 @@ const PokemonDetails = () => {
                       key={index}
                       className="pokemon__details sub__span sub__span--type"
                       style={{
-                        backgroundImage: `var(--color-${type.type.name})`,
+                        backgroundImage: `var(--color-${type.type.name})`
                       }}
                     >
                       <h3>{type.type.name}</h3>
