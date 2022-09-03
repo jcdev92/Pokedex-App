@@ -53,6 +53,7 @@ const PokemonCard = ({ url, totalPokemonLength, limit, offset }) => {
           ))}
         </ul>
       </section>
+      <hr className="divition__line"/>
       <footer className="card__footer">
         <ul className="footer__container">
           {pokemon?.stats.map((stat) => (
