@@ -256,7 +256,7 @@ body {
 }
 
 .pokedex__cards {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
