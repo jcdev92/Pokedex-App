@@ -82,7 +82,6 @@ img {
 body {
     line-height: 1.6;
     background-color: var(--color-tertiary);
-    margin-bottom: 6rem;
   }
 
 
@@ -100,7 +99,7 @@ body {
     align-items: center;
     font-family: var(--font-primary);
     background-color: var(--color-tertiary);
-    position: realtive:
+    position: realtive;
 }
 
 .home__card {

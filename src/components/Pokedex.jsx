@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import PokemonCard from "./Pokedex/PokemonCard";
 import Pagination from "./Pokedex/Pagination";
 import SearchInput from "./Pokedex/SearchInput";
@@ -55,14 +56,22 @@ const Pokedex = () => {
     setLimit(20);
   };
 
+  const navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate("/");
+  }
+
   return (
     <section className="pokedex">
       <header className="pokedex__box pokedex__box--header">
-        <img
-          src="https://i.ibb.co/f1xjrcP/image11.png"
-          alt="pokemon"
-          className="pokedex__img"
-        />
+        <div className="banner__container" onClick={handleHome}>
+          <img
+            src="https://i.ibb.co/f1xjrcP/image11.png"
+            alt="pokemon"
+            className="pokedex__img"
+          />
+        </div>
         <div className="box__red box__red--header"></div>
         <div className="box__black box__black--header"></div>
         <div className="box__ball box__ball--header" onClick={handleReset}>
