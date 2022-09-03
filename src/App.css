@@ -230,6 +230,11 @@ body {
     position: absolute;
     height: 70%;
     left: 10%;
+    cursor: pointer;
+}
+
+.pokedex__img:hover {
+    transform: scale(1.1);
 }
 
 .pokedex__box--header {
