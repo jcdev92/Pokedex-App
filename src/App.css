@@ -42,7 +42,7 @@ html {
 
    /* font colors */
    
-    --color-font-normal: #735259;
+    --color-font-normal: #735265;
     --color-font-fighting: #96402A;
     --color-font-flying: #0C1395;
     --color-font-poison: #5B3184;
@@ -52,7 +52,7 @@ html {
     --color-font-ghost: #323569;
     --color-font-steel: #5E736C;
     --color-font-fire: #F96D6F;
-    --color-font-water: #133258;
+    --color-font-water: #1479FB;
     --color-font-grass: #CAE099;
     --color-font-electric: #F9D02C;
     --color-font-psychic: #F95587;
@@ -279,6 +279,7 @@ body {
     padding: 0 0 2rem 0;
     transition: transform .2s ease-in-out;
     cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .card:hover {
@@ -329,6 +330,12 @@ body {
     width: 100%;
     height: 100%;
     padding: 1rem;
+}
+
+.card__body h2 {
+    font-family: var( --font-primary);
+    text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0);
+    letter-spacing: 4px;
 }
 
 .card__body h3 {
@@ -526,14 +533,15 @@ button:hover {
 
 
 .name {
-    font-size: var(--font-size-large);
+    font-family: var( --font-primary);
+    font-size: 3rem;
     color: var(--color-primary);
     flex-flow: row wrap;
     text-shadow: 2px 2px 3px rgba(0,0,0);
 }
 
 .name__line {
-    width: 35%;
+    width: 33%;
     height: 2px;
     background-color: var(--color-primary);
     opacity: 0.5;
