@@ -80,7 +80,7 @@ const Pokedex = () => {
       </header>
       <div className="searchbar">
         <h1>
-          Welcome trainer... <span>{nameTrainer}</span>! you can find your
+          Welcome trainer... <span>{nameTrainer}</span> ! you can find your
           favorite pokemon here!
         </h1>
         <div className="searchbar__container">
