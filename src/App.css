@@ -280,7 +280,7 @@ body {
     justify-content: center;
     gap: 0.8rem;
     background-color: #ffffffff;
-    border: 25px solid;
+    border: 15px solid;
     border-radius: 15px;
     padding: 0 0 1rem 0;
     transition: transform .2s ease-in-out;
