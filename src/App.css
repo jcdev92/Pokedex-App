@@ -97,7 +97,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-primary);
+    font-family: 'Pokemon Solid', sans-serif;
     background-color: var(--color-tertiary);
     position: realtive;
 }
