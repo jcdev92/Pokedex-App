@@ -344,10 +344,12 @@ body {
     font-family: var( --font-primary);
     text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0);
     letter-spacing: 4px;
+    
 }
 
 .card__body h3 {
     color: var(--color-secondary);
+    font-size: 1rem;
 }
 
 .divition__line {
@@ -387,6 +389,7 @@ body {
     justify-content: space-between;
     gap: 0.2rem;
     width: 45%;
+    font.size: 1rem;
 }
 
 .searchbar {
