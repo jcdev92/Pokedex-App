@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <section className="home">
       <div className="home__card">
-        <img src="src/assets/image11.png" alt="pokemon" /> 
+        <img src="https://i.ibb.co/f1xjrcP/image11.png" alt="pokemon" /> 
         <h1>Welcome Trainer!</h1>
         <p>To Start give me your trainer name</p>
       <form className="home__form" onSubmit={handleSubmit}>
