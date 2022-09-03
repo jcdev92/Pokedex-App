@@ -494,6 +494,7 @@ button:hover {
 
 .details {
     gap: 15rem;
+    padding-bottom: 4rem;
 }
 
 .pokemon__details, .pokemon__moves {
