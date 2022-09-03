@@ -273,7 +273,7 @@ body {
 }
 
 .card {
-    width: 27%;
+    width: 30%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
