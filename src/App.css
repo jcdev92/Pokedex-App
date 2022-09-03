@@ -327,6 +327,7 @@ body {
     width: 100%;
     height: 100%;
     gap: 1rem;
+    font-size: 1.5rem;
 }
 
 .card__body ul {
@@ -359,7 +360,7 @@ body {
 .card__footer {
     width: 100%;
     heigth: auto;
-    padding: 1.2rem;
+    padding: 0.5rem;
 }
 
 .footer__container {
@@ -368,13 +369,13 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 
 .footer__container li {
     display: inline-flex;
     flex-flow: row wrap;
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0 0.2rem 0 0.2rem;
     color: var(--color-secondary)
 }
 
@@ -384,9 +385,8 @@ body {
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.2rem;
     width: 45%;
-    font-size: 1.5rem;
 }
 
 .searchbar {
