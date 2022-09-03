@@ -280,6 +280,8 @@ body {
     transition: transform .2s ease-in-out;
     cursor: pointer;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 1.2rem;
 }
 
 .card:hover {
