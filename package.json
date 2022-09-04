@@ -1,7 +1,6 @@
 {
   "name": "pokedex-app",
   "private": true,
-  "homepage": "https://jcdev92.github.io/poke-api",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
