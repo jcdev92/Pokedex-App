@@ -1,4 +1,7 @@
-@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('./assets/fonts/Pokemon Solid.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -66,7 +69,7 @@ html {
 
 
     /* fonts */
-    --font-primary: 'Pokemon Solid', sans-serif;  
+    --font-primary: 'Pokemon Solid';  
     
     /* font-sizes */
     --font-size-extra-small: 0.8rem;
