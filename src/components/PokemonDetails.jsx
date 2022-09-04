@@ -25,14 +25,21 @@ const PokemonDetails = () => {
   };
 
 
+  const handleHome = () => {
+    navigate("/");
+  }
+
+
   return (
     <section className="details">
       <header className="pokedex__box pokedex__box--header">
-        <img
-          src="https://i.ibb.co/f1xjrcP/image11.png"
-          alt="pokemon"
-          className="pokedex__img"
-        />
+        <div className="banner__container" onClick={handleHome}>
+          <img
+            src="https://i.ibb.co/f1xjrcP/image11.png"
+            alt="pokemon"
+            className="pokedex__img"
+          />
+        </div>
         <div className="box__red box__red--header"></div>
         <div className="box__black box__black--header"></div>
         <div className="box__ball box__ball--header" onClick={handleReset}>
