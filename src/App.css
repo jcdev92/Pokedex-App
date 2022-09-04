@@ -9,7 +9,7 @@
     font-family: 'Pokemon Solid';
     font-style: normal;
     font-weight: normal;
-    src: local('Pokemon Solid'), url('./assets/fonts/Pokemon Solid.ttf') format('woff');
+    src: local('Pokemon Solid'), url('./assets/fonts/Pokemon Solid.woff') format('woff');
 }
 
 
